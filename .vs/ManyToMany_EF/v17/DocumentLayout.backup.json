@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Michael Dehaney\\Documents\\Dev Projects\\Student Courses CRUD\\ManyToMany_EF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5146F-D78A-4895-BB84-88E713562269}|ManyToMany_EF\\ManyToMany_EF.csproj|c:\\users\\michael dehaney\\documents\\dev projects\\student courses crud\\manytomany_ef\\manytomany_ef\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63D5146F-D78A-4895-BB84-88E713562269}|ManyToMany_EF\\ManyToMany_EF.csproj|solutionrelative:manytomany_ef\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5146F-D78A-4895-BB84-88E713562269}|ManyToMany_EF\\ManyToMany_EF.csproj|c:\\users\\michael dehaney\\documents\\dev projects\\student courses crud\\manytomany_ef\\manytomany_ef\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D5146F-D78A-4895-BB84-88E713562269}|ManyToMany_EF\\ManyToMany_EF.csproj|solutionrelative:manytomany_ef\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5146F-D78A-4895-BB84-88E713562269}|ManyToMany_EF\\ManyToMany_EF.csproj|c:\\users\\michael dehaney\\documents\\dev projects\\student courses crud\\manytomany_ef\\manytomany_ef\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D5146F-D78A-4895-BB84-88E713562269}|ManyToMany_EF\\ManyToMany_EF.csproj|solutionrelative:manytomany_ef\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Michael Dehaney\\Documents\\Dev Projects\\Student Courses CRUD\\ManyToMany_EF\\ManyToMany_EF\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "ManyToMany_EF\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\Michael Dehaney\\Documents\\Dev Projects\\Student Courses CRUD\\ManyToMany_EF\\ManyToMany_EF\\Models\\Student.cs",
+              "RelativeToolTip": "ManyToMany_EF\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T20:33:24.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Michael Dehaney\\Documents\\Dev Projects\\Student Courses CRUD\\ManyToMany_EF\\ManyToMany_EF\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "ManyToMany_EF\\Views\\Student\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Michael Dehaney\\Documents\\Dev Projects\\Student Courses CRUD\\ManyToMany_EF\\ManyToMany_EF\\Views\\Student\\Index.cshtml",
+              "RelativeToolTip": "ManyToMany_EF\\Views\\Student\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwCkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-26T20:15:43.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\Michael Dehaney\\Documents\\Dev Projects\\Student Courses CRUD\\ManyToMany_EF\\ManyToMany_EF\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "ManyToMany_EF\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\Michael Dehaney\\Documents\\Dev Projects\\Student Courses CRUD\\ManyToMany_EF\\ManyToMany_EF\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "ManyToMany_EF\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA0wCUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T19:54:48.605Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+﻿@model List<Student>
+
+    @{
+    ViewBag.Title = "Student Courses";
+    }
+    
+    <h1>Select Students By Course</h1>
+    <form asp-action="ChangeCourse" method="post" id="courseForm">
+        <div>
+            <label class="form-label">Seleect A Course</label>
+            <select class="form-control" id="courseSelect" name="courseId">
+                <option value="">Select a course</option>
+            @foreach(Course course in ViewBag.Courses)
+            {
+                if (ViewBag.SelectCourse != null && ViewBag.SelectedCourse == course.CourseId)
+                {
+                    <option value="@course.CourseId" selected>@course.Title</option>
+                }
+                else
+                {
+                    <option value="@course.CourseId">@course.Title</option>
+                }
+            }
+        </select>
+        </div>
+    </form>
+
+<script>
+    var selectElement = document.getElementById('courseSelect');
+    //Add event listener for change event
+    selectElement.addEventListener('change', function () {
+        var formElement = document.getElementById('courseForm');
+        formElement.submit();
+    })
+</script>
+
+@* <script>
+    var selectElement = document.getElementById('courseSelect');
+    //Add event listener for change event
+    selectElement.addEventListener('change', function () {
+        var formElement = document.getElementById('courseForm');
+        formElement.submit();
+    })
+</script> *@
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Financial Aid Status</th>
+            <th>Enroll In Class</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.FinancialAid</td>
+                <td>
+                    <a asp-action="ChangeEnrollment" asp-asp-controller="Student" class="btn btn-info" asp-route-id="@student.StudentId">Edit Enrolled Classes</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
