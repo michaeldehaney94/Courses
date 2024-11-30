@@ -47,5 +47,77 @@ namespace ManyToMany_EF.Controllers
             return View("Index", studentsInCourse);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> EnrollNewStudent()
+        {
+            ViewBag.Courses = await _db.Courses.ToListAsync();
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EnrollNewStudent(Student s, string[] enrolledCourses)
+        {
+
+            if (enrolledCourses != null)
+            {
+                foreach (var courseId in enrolledCourses)
+                {
+                    Course c = _db.Courses.Find(int.Parse(courseId));
+                    s.Courses.Add(c);
+                }
+            }
+            _db.Students.Add(s);
+            await _db.SaveChangesAsync();
+            List<Student> students = await _db.Students.ToListAsync();
+            ViewBag.Courses = await _db.Courses.ToListAsync();
+            return View("Index", students);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ChangeEnrollment(int id)
+        {
+            var student = await _db.Students.Include(s => s.Courses).FirstOrDefaultAsync(s => s.StudentId == id);
+            ViewBag.Courses = await _db.Courses.ToListAsync();
+            return View(student);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ModifyStudentEnrolledCourses(Student s, string[] enrolledCourses)
+        {
+            //Student student = await _db.Students.Include(s => s.Courses).FirstOrDefaultAsync(s => s.StudentId == s.StudentId);
+            Student student = await _db.Students.Where(s => s.StudentId == s.StudentId).Include(s => s.Courses).FirstOrDefaultAsync();
+            student.Courses.Clear();
+            if (enrolledCourses != null)
+            {
+                foreach (var courseId in enrolledCourses)
+                {
+                    Course c = _db.Courses.Find(int.Parse(courseId));
+                    student.Courses.Add(c);
+                }
+            }
+            await _db.SaveChangesAsync();
+            List<Student> students = await _db.Students.ToListAsync();
+            ViewBag.Courses = await _db.Courses.ToListAsync();
+            return View("Index", students);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteStudent(int id)
+        {
+           return View(await _db.Students.FindAsync(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteStudent(Student s)
+        {
+            Student student = await _db.Students.Where(s => s.StudentId == s.StudentId).Include(s => s.Courses).FirstOrDefaultAsync();
+
+            _db.Students.Remove(s);
+            await _db.SaveChangesAsync();
+            List<Student> students = await _db.Students.ToListAsync();
+            ViewBag.Courses = await _db.Courses.ToListAsync();
+            return View("Index", students);
+        }
+
     }
 }
